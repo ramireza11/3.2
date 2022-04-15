@@ -1,5 +1,5 @@
 # NINJA ACADEMY
-## _By Angel Ramirez
+## _By Angel Ramirez_
 You will be exploring as a ninja and trying to defeat the Corazon Gang from
 destroying the city.
 
