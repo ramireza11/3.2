@@ -12,7 +12,7 @@ Of course you want to get into black belt.
 
 ---
 
-#Controls
+[#Controls]
 
 The controls are really easy
 
@@ -36,4 +36,4 @@ characters. I will like to have a vintage vibe to the game as well.
 I will be testing each time I make an edit. I do not want a game that doesn't
 work and is always debugging. That's why I would like to test different ways of throwing the objects to make it better and what will work for my project.
 
-I will love for everyone to have fun and just be happy playing the game. 
+I will love for everyone to have fun and just be happy playing the game.
