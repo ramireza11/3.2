@@ -12,7 +12,7 @@ destroying the city.
 
 ---
 
-#[Controls]
+#Controls
 
 The controls are really easy.
 
@@ -24,7 +24,7 @@ The controls are really easy.
 
 ---
 
-#[Coding]
+#Coding
 
 I would like to make a boss throw objects at your character which you will have
 to dodge them or else it's game over for you. I don't know how ill do it but it
