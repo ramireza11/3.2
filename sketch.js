@@ -1,11 +1,18 @@
 let state = 'title';
 let cnv;
 let points = 0;
+let player;
+let pizza;
 
 function setup() {
   cnv = createCanvas(600, 600);
-  
+
   textFont('Courier New Bold');
+
+  player = new Player();
+
+  pizza = new Pizza();
+
 }
 
 function draw() {
@@ -46,8 +53,12 @@ function titleMouseClicked(){
 
 function level1(){
   background(50, 150, 200);
-  text('click for points', 0, height - 30);
+//text('click for points', 0, height - 30);
 
+  player.display();
+
+  pizza.display();
+  pizza.move();
 }
 
 function level1MouseClicked(){
