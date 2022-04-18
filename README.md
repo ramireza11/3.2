@@ -15,11 +15,13 @@
 
 The controls are really easy.
 
-- MOVE LEFT - A
+- MOVE LEFT - <
 
-- MOVE RIGHT - D
+- MOVE RIGHT - >
 
-- JUMP - SPACEBAR
+- MOVE UP - ^
+
+- MOVE DOWN - ARROW KEY DOWN
 
 ---
 
