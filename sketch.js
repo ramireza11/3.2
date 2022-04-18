@@ -5,11 +5,14 @@ let points = 0;
 let player;
 let pizzas = [];
 let shirikens = [];
-//let playerImg;
+let playerImg;
+let pizzaImg;
 
-//function preload(){
-  //playerImg = loadImage('assets /ninja.png');
-//}
+function preload(){
+  playerImg = loadImage('assets /ninja.png');
+  pizzaImg = loadImage('assets /pizza.png');
+
+}
 
 function setup() {
   cnv = createCanvas(600, 600);

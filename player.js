@@ -9,8 +9,8 @@ class Player {
   }
 
   display() {
-    //image(playerImg, 300, 300, this.r, this.r);
-    rect(this.x, this.y, this.r, this.r);
+    image(playerImg, this.x, this.y, this.r, this.r);
+    //rect(this.x, this.y, this.r, this.r);
   }
 
   move() {

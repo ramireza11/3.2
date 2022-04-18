@@ -8,7 +8,8 @@ class Pizza {
   }
 
   display(){
-    rect(this.x, this.y, this.r, this.r);
+    image(pizzaImg, this.x, this.y, this.r, this.r);
+    //rect(this.x, this.y, this.r, this.r);
   }
 
   move(){
