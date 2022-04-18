@@ -1,14 +1,13 @@
 # NINJA ACADEMY
 ## _By Angel Ramirez_
 
-> You will be exploring as a ninja and trying to defeat the Corazon Gang from
-destroying the city.
+> You will be a ninja.
 
-> After every level it will get hard
+> Your ninja will be hungry and will need to eat but it isn't that simple.
 
-> After you defeat every boss you will get a new color belt.
+> You will be thrown to work on getting your food.
 
-> Of course you want to get into black belt.
+> This food will be your achievement.
 
 ---
 
