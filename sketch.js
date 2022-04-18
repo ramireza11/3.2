@@ -183,7 +183,7 @@ function youWin(){
   text('click anywhere to restart', 150, 550);
 }
 
-function youLostMouseClicked(){
+function youWinMouseClicked(){
   state = 'title';
   points = 0;
 }
