@@ -9,8 +9,8 @@ class Shiriken {
   }
 
   display(){
-    //image(shirikenImg, this.x, this.y, this.r, this.r);
-    rect(this.x, this.y, this.r, this.r);
+    image(shirikenImg, this.x, this.y, this.r, this.r);
+    //rect(this.x, this.y, this.r, this.r);
   }
 
   move(){

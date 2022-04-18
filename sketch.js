@@ -7,10 +7,12 @@ let pizzas = [];
 let shirikens = [];
 let playerImg;
 let pizzaImg;
+let shirikenImg;
 
 function preload(){
   playerImg = loadImage('assets /ninja.png');
   pizzaImg = loadImage('assets /pizza.png');
+  shirikenImg = loadImage('assets /shuri.png');
 
 }
 
