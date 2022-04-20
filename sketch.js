@@ -22,7 +22,6 @@ function setup() {
 
   //imageMode(CENTER);
   rectMode(CENTER);
-  textFont('Courier New Bold');
 
   player = new Player();
 
@@ -94,9 +93,12 @@ function keyReleased() {
 
 function title(){
   background(0);
-  textSize(56);
+  textFont('', 12);
   fill(255);
   text('NINJA ACADEMY', 80, 80);
+
+  textSize(45);
+  text('CONTROLS', 200, 200);
 
   textSize(30);
   text('click here', 250, 500);
@@ -110,7 +112,7 @@ function titleMouseClicked(){
 function level1(){
   background(50, 150, 200);
 
-  if (random(1) <= 0.04){
+  if (random(1) <= 0.02){
     pizzas.push(new Pizza());
   }
 
