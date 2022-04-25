@@ -8,11 +8,17 @@ let shirikens = [];
 let playerImg;
 let pizzaImg;
 let shirikenImg;
+let logoImg;
+let eImg;
+let ninjalogoImg;
 
 function preload(){
   playerImg = loadImage('assets /ninja.png');
   pizzaImg = loadImage('assets /pizza123.png');
   shirikenImg = loadImage('assets /shuri.png');
+  logoImg = loadImage('assets /logo1.png');
+  eImg = loadImage('assets /e.png');
+  ninjalogoImg = loadImage('assets /logo45.png');
 
 }
 
@@ -97,12 +103,21 @@ function keyReleased() {
 
 function title(){
   background(0);
-  textFont('copperplate, papyrus, fantasy', 12);
-  fill(255);
-  text('NINJA ACADEMY', 80, 80);
+  image(logoImg, 60, 150, 480, 350);
+  image(eImg, 10, 530, 40, 55);
 
-  textSize(30);
-  text('click anywhere', 250, 500);
+  textFont('copperplate, papyrus, fantasy', 60);
+  fill(237,12,17);
+  text('NINJA ACADEMY', 52, 80);
+
+  textFont('copperplate, papyrus, fantasy', 30);
+  text('"This is where ninjas as made!"', 62, 130);
+
+  textFont('copperplate, papyrus, fantasy', 20);
+  fill(237, 123, 33);
+  text('click anywhere to start', 180, 580);
+
+
 }
 
 function titleMouseClicked(){
@@ -112,9 +127,26 @@ function titleMouseClicked(){
 
 function instructions(){
   background(0);
+  image(ninjalogoImg, 250, 120, 300, 350);
+
   fill(324);
   textFont('copperplate, papyrus, fantasy', 23);
-  text('instructions', 32, 23, 34);
+  text('INSTRUCTIONS', 32, 23, 34);
+
+  textSize(18);
+  text('Collect The Pizza Slices To Win!', 10, 100);
+
+  textSize(18);
+  text('Get 10 Pizza Slices And You Win!', 10, 200);
+
+  textSize(15);
+  text('AVOID THE SHURIKENS AT ALL COSTS!', 10, 300);
+
+  textSize(30);
+  text('CONTROLS', 10, 400);
+
+  textSize(18);
+  text('Only Arrow Keys Have Fun HAHA!', 10, 500);
 }
 
 function instructionsMouseClicked(){
@@ -129,7 +161,7 @@ function level1(){
     pizzas.push(new Pizza());
   }
 
-  if (random(1) <= 0.02){
+  if (random(1) <= 0.04){
     shirikens.push(new Shiriken());
   }
 
@@ -137,7 +169,7 @@ function level1(){
   player.move();
 
 
-  for(let i = 0; i < pizzas.length; i++){
+  for(let i = 2; i < pizzas.length; i++){
     pizzas[i].display();
     pizzas[i].move();
    }
@@ -161,7 +193,7 @@ function level1(){
   for (let i = shirikens.length - 1; i >= 0; i--){
   if (dist(player.x, player.y, shirikens[i].x, shirikens[i].y) <= (player.r + shirikens[i].r) /2){
     points--;
-    shirikens.splice(i, 1);
+    shirikens.splice(i, 2);
   } else if (shirikens[i].x > 600){
     shirikens.splice(i, 1);
     console.log('shiriken is out');
@@ -187,15 +219,23 @@ function level1MouseClicked(){
 }
 
 function youWin(){
-  background(213,89,20);
+  background(0);
   textSize(56);
-  stroke(255);
   textFont('copperplate, papyrus, fantasy');
   text('YOU WIN', 180, 80);
 
   textSize(30);
-  textFont('Courier New Bold');
-  text('click anywhere to restart', 150, 550);
+  textFont('copperplate, papyrus, fantasy');
+  text('Great Job Collecting the pizza!', 50, 250);
+
+  textSize(30);
+  textFont('copperplate, papyrus, fantasy');
+  text('Your Ninja is all fueled up now!', 50, 400);
+
+
+  textSize(30);
+  textFont('copperplate, papyrus, fantasy',);
+  text('Click Anywhere To Go To Home Page', 30, 530);
 }
 
 function youWinMouseClicked(){
@@ -204,15 +244,22 @@ function youWinMouseClicked(){
 }
 
 function youLost(){
-  background(213,89,20);
+  background(0);
   textSize(56);
-  stroke(255);
   textFont('copperplate, papyrus, fantasy');
-  text('YOU LOST', 180, 80);
+  text('HAHA YOU LOST', 60, 80);
 
   textSize(30);
   textFont('copperplate, papyrus, fantasy');
-  text('click anywhere to restart', 150, 550);
+  text('Come On Defeated By Some Shurikens', 10, 230);
+
+  textSize(30);
+  textFont('copperplate, papyrus, fantasy');
+  text('Thought You Were A Better Ninja', 30, 380);
+
+  textSize(30);
+  textFont('copperplate, papyrus, fantasy',);
+  text('Click Anywhere To Go To Home Page', 30, 530);
 }
 
 function youLostMouseClicked(){
