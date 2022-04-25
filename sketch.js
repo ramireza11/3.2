@@ -11,7 +11,7 @@ let shirikenImg;
 
 function preload(){
   playerImg = loadImage('assets /ninja.png');
-  pizzaImg = loadImage('assets /pizza.png');
+  pizzaImg = loadImage('assets /pizza123.png');
   shirikenImg = loadImage('assets /shuri.png');
 
 }
@@ -35,6 +35,10 @@ function draw() {
     case 'title':
       title();
       cnv.mouseClicked(titleMouseClicked);
+      break;
+    case 'instructions':
+      instructions();
+      cnv.mouseClicked(instructionsMouseClicked);
       break;
     case 'level 1':
       level1();
@@ -93,18 +97,27 @@ function keyReleased() {
 
 function title(){
   background(0);
-  textFont('', 12);
+  textFont('copperplate, papyrus, fantasy', 12);
   fill(255);
   text('NINJA ACADEMY', 80, 80);
 
-  textSize(45);
-  text('CONTROLS', 200, 200);
-
   textSize(30);
-  text('click here', 250, 500);
+  text('click anywhere', 250, 500);
 }
 
 function titleMouseClicked(){
+  console.log('canvas is clicked on title page');
+  state = 'instructions'
+}
+
+function instructions(){
+  background(0);
+  fill(324);
+  textFont('copperplate, papyrus, fantasy', 23);
+  text('instructions', 32, 23, 34);
+}
+
+function instructionsMouseClicked(){
   console.log('canvas is clicked on title page');
   state = 'level 1'
 }
@@ -177,7 +190,7 @@ function youWin(){
   background(213,89,20);
   textSize(56);
   stroke(255);
-  textFont('Courier New Bold');
+  textFont('copperplate, papyrus, fantasy');
   text('YOU WIN', 180, 80);
 
   textSize(30);
@@ -194,11 +207,11 @@ function youLost(){
   background(213,89,20);
   textSize(56);
   stroke(255);
-  textFont('Courier New Bold');
+  textFont('copperplate, papyrus, fantasy');
   text('YOU LOST', 180, 80);
 
   textSize(30);
-  textFont('Courier New Bold');
+  textFont('copperplate, papyrus, fantasy');
   text('click anywhere to restart', 150, 550);
 }
 
