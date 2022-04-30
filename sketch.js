@@ -11,20 +11,42 @@ let shirikenImg;
 let logoImg;
 let eImg;
 let ninjalogoImg;
+let bgpImg;
+let keysImg;
+
+//let playerSS;
+//let playerJSON;
+//let playerAnimation = [];
+
 
 function preload(){
-  playerImg = loadImage('assets /ninja.png');
+  playerImg = loadImage('assets /ninja0.png');
   pizzaImg = loadImage('assets /pizza123.png');
   shirikenImg = loadImage('assets /shuri.png');
   logoImg = loadImage('assets /logo1.png');
   eImg = loadImage('assets /e.png');
   ninjalogoImg = loadImage('assets /logo45.png');
+  bgpImg = loadImage('assets /bgp.png');
+  keysImg = loadImage('assets /keys.png');
+
+  //playerSS = loadImage('assets /spritesheet.png');
+  //playerJSON = loadJSON('assets /spritesheet.json');
 
 }
 
 function setup() {
   cnv = createCanvas(600, 600);
-  frameRate(60);
+  //frameRate(60);
+
+  //console.log(playerJSON.frames[0].frame);
+//  let playerFrames = playerJSON.frames;
+
+//  for (let i = 0; i < playerFrames.length; i++){
+  //  let pos = playerFrames[i].frame;
+  //  let img = playerSS.get(pos.x, pos.y, pos.w, pos.h);
+  //  playerAnimation.push(img);
+  //  console.log(playerAnimation);
+//  }
 
   //imageMode(CENTER);
   rectMode(CENTER);
@@ -33,6 +55,7 @@ function setup() {
 
   pizzas.push(new Pizza());
   shirikens.push(new Shiriken());
+
 }
 
 function draw() {
@@ -128,6 +151,7 @@ function titleMouseClicked(){
 function instructions(){
   background(0);
   image(ninjalogoImg, 250, 120, 300, 350);
+  image(keysImg, 180, 440, 100, 80);
 
   fill(324);
   textFont('copperplate, papyrus, fantasy', 23);
@@ -146,7 +170,7 @@ function instructions(){
   text('CONTROLS', 10, 400);
 
   textSize(18);
-  text('Only Arrow Keys Have Fun HAHA!', 10, 500);
+  text('Arrow keys', 10, 480);
 }
 
 function instructionsMouseClicked(){
@@ -155,7 +179,7 @@ function instructionsMouseClicked(){
 }
 
 function level1(){
-  background(50, 150, 200);
+  background(bgpImg);
 
   if (random(1) <= 0.02){
     pizzas.push(new Pizza());
@@ -199,14 +223,19 @@ function level1(){
     console.log('shiriken is out');
   }
 }
+  fill(43, 29, 20);
+  rect(10, 20, 30, 1200);
 
-  text(`points: ${points}`, 0, 590);
+  fill(255, 255, 255);
+  text(`points: ${points}`, 260, 590);
 
   if (points >= 10){
     state = 'you win';
   } else if (points <= -1){
     state = 'you lost';
   }
+//  fill(43, 29, 20);
+//  rect(10, 20, 30, 1200);
 
 }
 
@@ -221,6 +250,7 @@ function level1MouseClicked(){
 function youWin(){
   background(0);
   textSize(56);
+  fill(255,255,255);
   textFont('copperplate, papyrus, fantasy');
   text('YOU WIN', 180, 80);
 
@@ -246,6 +276,7 @@ function youWinMouseClicked(){
 function youLost(){
   background(0);
   textSize(56);
+  fill(255,255,255);
   textFont('copperplate, papyrus, fantasy');
   text('HAHA YOU LOST', 60, 80);
 
